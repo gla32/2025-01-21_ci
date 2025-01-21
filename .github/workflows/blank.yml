@@ -1,4 +1,4 @@
-# This is a basic workflow to help you get started with Actions
+  # This is a basic workflow to help you get started with Actions
 
 name: CI
 
@@ -30,6 +30,16 @@ jobs:
         run: echo Hello, world!
             pwd 
             ls - alh
+      - name: Run bash script
+      - run: bash script.sh
+      
+      - name: Print env vars
+        run: echo $VAR1 $VAR2
+        env: 
+          VAR1: "secret 1"
+          VAR2: "another secret value"
+
+      
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
